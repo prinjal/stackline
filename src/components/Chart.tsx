@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  Label,
 } from "recharts";
 import { Sales } from "./Record";
 
@@ -36,14 +37,23 @@ const RetailSalesChart = ({ data }: ChartProp) => {
     <div className="p-6 bg-white shadow rounded-lg">
       <h2 className="text-xl font-bold text-gray-800 mb-5">Retail Sales</h2>
       <LineChart
-        width={730}
+        width={800}
         height={250}
         data={chartData}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        margin={{ top: 20, right: 30, left: 50, bottom: 5 }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <XAxis dataKey="name">
+          <Label value="Month" offset={-10} position="insideBottom" dx={40} />
+        </XAxis>
+        <YAxis
+          label={{
+            value: "Sales ($)",
+            angle: -90,
+            position: "insideLeft",
+            dx: -40,
+          }}
+        />
         <Tooltip />
         <Legend />
         <Line type="monotone" dataKey="Sales" stroke="#8884d8" />
