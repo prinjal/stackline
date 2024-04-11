@@ -46,7 +46,7 @@ const RetailSalesChart = ({ data }: ChartProp) => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="Sales" stroke="#8884d8" />
+        <Line type="monotone" dataKey="Month" stroke="#8884d8" />
       </LineChart>
     </div>
   );
