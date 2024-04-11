@@ -47,7 +47,6 @@ const List = ({ id, sales }: ListProp) => {
     return sortField === field ? (sortOrder === "asc" ? "▲" : "▼") : "▼";
   };
 
-  // List component with headers as divs for consistency
   return (
     <div className="container mx-auto mt-10">
       <div className="grid grid-cols-5 gap-4 p-4 bg-white font-bold text-sm text-gray-800 m-4">
@@ -86,8 +85,6 @@ const List = ({ id, sales }: ListProp) => {
       </div>
     </div>
   );
-
-  // Record component remains unchanged
 };
 
 export default List;
