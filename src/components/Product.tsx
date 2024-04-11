@@ -6,7 +6,7 @@ interface ProductProp {
   tags: string[];
 }
 
-const Product = ({ id, title, image, subtitle, tags }: ProductProp) => {
+const Product = ({ title, image, subtitle, tags }: ProductProp) => {
   return (
     <div className="flex flex-col p-4 bg-white shadow rounded-lg m-5 min-h-screen">
       <img src={image} alt="Product" className="w-full h-auto mb-4" />
